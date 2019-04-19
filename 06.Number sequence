@@ -1,0 +1,17 @@
+function solve(input){
+ let n = Number(input.shift());
+ let maxNumber = -999999999999;
+ let minNumber = +999999999999;
+
+  for(var i = 1;i <= n;i++){
+      let currentNumber = Number(input.shift());
+      if(currentNumber < minNumber){
+        minNumber = currentNumber;
+      }
+      if(currentNumber > maxNumber){
+      maxNumber = currentNumber;
+      }
+    }
+  console.log("Max number: " + maxNumber);
+  console.log("Min number: " + minNumber); 
+}
