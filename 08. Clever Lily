@@ -1,0 +1,31 @@
+function solve(index){
+let age = Number(index[0]);
+let washingMachinePrice = Number(index[1]);
+let toyPrice = Number(index[2]);
+
+let brotherMoney = 0;
+let sum = 0;
+let counter = 1;
+let counterToys = 0;
+
+for(var i = 1; i <= age;i++){
+  if(i % 2 == 0){
+    sum += 10 * counter;
+    counter++;
+    brotherMoney++;
+  }
+  else{
+    counterToys++;
+  } 
+}
+ sum += toyPrice * counterToys - brotherMoney;
+let diff = Math.abs(sum - washingMachinePrice);
+
+if(sum >= washingMachinePrice){
+  console.log("Yes! " + diff.toFixed(2));
+}
+else{
+  console.log("No! " + diff.toFixed(2));
+}
+}
+solve([21,1570.98,3]);
